@@ -30,7 +30,7 @@ def isolateObjects(imgPath):
     for i,peak in enumerate(peaks):
         mask = cv2.inRange(h, int(peak), int(peak))
         blob = cv2.bitwise_and(image, image, mask=mask)
-        cv2.imwrite("Data set\\Testpre\\"+"colourblobs-%d-hue_%03d.png" % (i, peak), blob)
+        cv2.imwrite("Data set\\Testpre\\"+imgPath+"colourblobs-%d-hue_%03d.png" % (i, peak), blob)
 
 def PCAfeatureExtraction(image):
     X = np.array(image)
